@@ -1,7 +1,7 @@
 PHP Example Project
 ===================
 
-> An example setup for Invoke projects
+> An example setup for Invoke projects that use CI/CD tools
 
 In this repo, you can see some examples for projects that will be used under our CI/CD tools.
 
