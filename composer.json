@@ -1,0 +1,30 @@
+{
+    "name": "invoke/project",
+    "description": "An example project for PHP projects",
+    "type": "project",
+    "license": "MIT",
+    "authors": [{
+        "name": "Invoke",
+        "email": "dev@invokemedia.com"
+    }],
+    "scripts": {
+        "test": "./vendor/bin/phpunit",
+        "sniff": "./vendor/bin/phpcs -n --standard=PSR2 *.php",
+        "lint": "sh ./lint.sh *.php",
+        "all": [
+            "@test",
+            "@sniff",
+            "@lint"
+        ],
+        "post-autoload-dump": "@all"
+    },
+    "require": {
+        "php": ">=7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7",
+        "phpunit/php-invoker": "^1.1",
+        "squizlabs/php_codesniffer": "^2.7"
+    },
+    "minimum-stability": "stable"
+}
