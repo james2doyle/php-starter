@@ -5,7 +5,7 @@
     "license": "MIT",
     "authors": [{
         "name": "Invoke",
-        "email": "dev@invokemedia.com"
+        "email": "dev@invokedigital.co"
     }],
     "scripts": {
         "test": "./vendor/bin/phpunit",
