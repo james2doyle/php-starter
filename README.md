@@ -14,6 +14,19 @@ The setup showcases the following PHP tasks:
 
 Using the code from the `composer.json`, these tasks will run after each `composer install` or `composer update` making it ideal for the CI/CD tools which will run those commands to prepare the project for movement to staging.
 
+### Git Hooks
+
+This project also includes a git hook for making sure the composer scripts run before a commit is made and would be difficult to undo.
+
+To install the hooks, run:
+
+```
+mv hooks/pre-commit .git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
+```
+
+This moves the script to the git directory for hooks, then changes the premissions of the file to allow execution on your local machine.
+
 ### Other Script Snippets
 
 Laravel:
