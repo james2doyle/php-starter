@@ -13,3 +13,12 @@ The setup showcases the following PHP tasks:
 * Code Coverage
 
 Using the code from the `composer.json`, these tasks will run after each `composer install` or `composer update` making it ideal for the CI/CD tools which will run those commands to prepare the project for movement to staging.
+
+### Other Script Snippets
+
+Laravel:
+
+```
+"sniff": "./vendor/bin/phpcs -n --standard=PSR2 app/ resources/views/ tests/",
+"lint": "sh ./lint.sh {app,app/*,resources/views,tests}/**.php",
+```
