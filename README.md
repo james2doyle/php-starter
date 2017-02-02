@@ -32,13 +32,13 @@ This moves the script to the git directory for hooks, then changes the premissio
 Laravel:
 
 ```
-"sniff": "./vendor/bin/phpcs -n --standard=PSR2 --colors app/ resources/views/ tests/",
+"sniff": "./vendor/bin/phpcs -n --standard=PSR2 --extensions=php --colors app/ resources/views/ tests/",
 "lint": "sh ./lint.sh {app,app/*,resources/views,tests}/**.php",
 ```
 
 WordPress:
 
 ```
-"sniff": "./vendor/bin/phpcs -n --standard=PSR2 --colors wp-content/themes/{YOUR_THEME_NAME}/ tests/",
+"sniff": "./vendor/bin/phpcs -n --standard=PSR2 --extensions=php --colors wp-content/themes/{YOUR_THEME_NAME}/ tests/",
 "lint": "sh ./lint.sh {wp-config.php,wp-content/themes/{YOUR_THEME_NAME}/**.php}",
 ```
