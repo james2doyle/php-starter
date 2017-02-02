@@ -7,12 +7,20 @@ In this repo, you can see some examples for projects that will be used under our
 
 The setup showcases the following PHP tasks:
 
-* Linting (via `lint.sh` - which makes `php -l` return an exit code)
+* Linting (via PHPStan)
 * Code Sniffing
 * Testing
 * Code Coverage
 
 Using the code from the `composer.json`, these tasks will run after each `composer install` or `composer update` making it ideal for the CI/CD tools which will run those commands to prepare the project for movement to staging.
+
+### Linting
+
+If phpstan is being painful, then feel free to use the `lint.sh` script. It is used in the following way:
+
+```
+sh ./lint.sh {path,glob,*.pattern}
+```
 
 ### Git Hooks
 
@@ -37,6 +45,8 @@ Laravel:
 ```
 
 WordPress:
+
+**Be sure to remove PHPStan when using WordPress**. Since WordPress does not support PSR4, nothing is autoloaded and it is like all functions are missing...
 
 ```
 "sniff": "./vendor/bin/phpcs -n --standard=PSR2 --extensions=php --colors wp-content/themes/{YOUR_THEME_NAME}/ tests/",
