@@ -41,7 +41,7 @@ Laravel:
 
 ```
 "sniff": "./vendor/bin/phpcs -n --standard=PSR2 --extensions=php --colors app/ resources/views/ tests/",
-"lint": "sh ./lint.sh {app,app/*,resources/views,tests}/**.php",
+"lint": "./vendor/bin/phpstan analyse -l 2 {app,resources/views,tests}/**.php",
 ```
 
 WordPress:
