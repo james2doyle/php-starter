@@ -19,6 +19,13 @@ Using the code from the `composer.json`, these tasks will run after each `compos
 Laravel:
 
 ```
-"sniff": "./vendor/bin/phpcs -n --standard=PSR2 app/ resources/views/ tests/",
+"sniff": "./vendor/bin/phpcs -n --standard=PSR2 --colors app/ resources/views/ tests/",
 "lint": "sh ./lint.sh {app,app/*,resources/views,tests}/**.php",
+```
+
+WordPress:
+
+```
+"sniff": "./vendor/bin/phpcs -n --standard=PSR2 --colors wp-content/themes/{YOUR_THEME_NAME}/ tests/",
+"lint": "sh ./lint.sh {wp-config.php,wp-content/themes/{YOUR_THEME_NAME}/**.php}",
 ```

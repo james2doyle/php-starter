@@ -9,7 +9,7 @@
     }],
     "scripts": {
         "test": "./vendor/bin/phpunit",
-        "sniff": "./vendor/bin/phpcs -n --standard=PSR2 *.php",
+        "sniff": "./vendor/bin/phpcs -n --standard=PSR2 --colors *.php",
         "lint": "sh ./lint.sh *.php",
         "all": [
             "@test",
