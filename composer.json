@@ -8,6 +8,7 @@
         "email": "james2doyle@gmail.com"
     }],
     "scripts": {
+        "install-hook": "cp hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit",
         "sniff": "./vendor/bin/phpcs -n --standard=PSR2 --colors ./src",
         "mess": "./vendor/bin/phpmd ./src text cleancode,codesize,controversial,design,naming,unusedcode",
         "lint": "./vendor/bin/psalm",

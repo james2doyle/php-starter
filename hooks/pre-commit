@@ -13,15 +13,23 @@ then
 fi
 SFILES=${SFILES:-$STAGED_FILES_CMD}
 
-echo "Checking PHPUnit..."
-composer run test
+echo "Running Code Sniffer..."
+composer run sniff
 if [ $? != 0 ]
 then
     echo "Fix the errors before committing."
     exit 1
 fi
 
-echo "Checking PHP Lint..."
+echo "Running Code Mess..."
+composer run mess
+if [ $? != 0 ]
+then
+    echo "Fix the errors before committing."
+    exit 1
+fi
+
+echo "Checking PHP Logic..."
 composer run lint
 if [ $? != 0 ]
 then
@@ -29,8 +37,8 @@ then
     exit 1
 fi
 
-echo "Running Code Sniffer..."
-composer run sniff
+echo "Checking PHPUnit..."
+composer run test
 if [ $? != 0 ]
 then
     echo "Fix the errors before committing."
