@@ -13,19 +13,21 @@
  * @version    1.0.0
  * @author     James Doyle
  * @license    MIT License
- * @copyright  (c) 2017, James Doyle
+ * @copyright  (c) 2019, James Doyle
  * @link       https://ohdoylerules.com
  */
 
 namespace Tests;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
+use App\MyClass;
 
-class BaseTest extends PHPUnit_Framework_TestCase
+class BaseTest extends TestCase
 {
     /** @test */
     public function itCanPassATest()
     {
-        $this->assertTrue(true);
+        $func = new MyClass;
+        self::assertEquals('hello world', $func());
     }
 }
